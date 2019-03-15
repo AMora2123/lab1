@@ -1,0 +1,48 @@
+/*
+ *Author:Ariel Mora (arielmora@bennington.edu)
+ * Date: 2/19/2019
+ *
+ */
+
+#include <iostream>
+#include<string>
+using namespace std;
+
+struct person {         //Creates new data type of person
+string name;            //This string creates a name for the person
+int age;                //This int defines the age of the person
+};
+
+person getPerson(){     //This function send a survey for the components of the person
+    person Person1;     //Defines a specific person
+
+    cout<<"What is your name?"<<endl;       //Asks users to give their name
+    cin>> Person1.name;                     //Gives place for user to enter name
+    cout << "How old are you?" << endl;     //Asks users their age
+    cin >> Person1.age;                     //Gives place for user to enter age
+    return Person1;                         //Function returns specific person's information
+}
+
+person printPerson(){                           //Function that broadcasts the users information
+    person You=getPerson();                     //Allows info from getPerson to be used in parameters
+    cout << "Your name is " << You.name<<".";   //Broadcasts name given by user
+    cout << " Your age is "<< You.age<<".";      //Broadcasts age given by user
+    return You;                                 //Allows function to return the users info
+}
+
+person changePerson(){          //Function that changes the person being broadcast
+    person Person2;             //Defines new person(Person2)
+    string answer;              //Defines an answer given by user
+    Person2.name="Andrew";      //Gives Person2 the name Andrew
+    Person2.age=100;            //Gives Person2 an age of 100
+    cout<<" Would you like a name change?";     //Asks user if they want name change
+    cin>>answer;                                //Place for the input of user answer
+    cout<<"You said "<< answer<<"."<< "So we changed your name to "<< Person2.name<<".";    //Gives user a new name
+    cout<<"You are now "<< Person2.age<<".";        //Gives user new age
+    return Person2;     //Allows function to return the new name and age
+}
+
+int main() {        //The main function
+    printPerson();  //Activates the printPerson function
+    changePerson(); //Activates the changePerson function
+}
