@@ -1,0 +1,24 @@
+/* Author: Ariel Mora (arielmora@bennington.edu)
+ * Date: 3/5/2019
+ * source utilized: http://www.math.uaa.alaska.edu/~afkjm/csce211/fall2018/handouts/RandomFunctions.pdf
+ * source utilized: https://en.cppreference.com/w/cpp/language/operator_arithmetic
+ */
+
+#include <iostream>
+#include<ctime>              //Uses computer time in functions
+using namespace std;         //To define cout, cin and other functions
+
+int evenOddOrZero(int x){    //Declare the function evenOddOrZero with parameter x
+    if (x%2==0){             //If the (int generated remainder/2) =0 then
+        cout<<"even"<<endl;  //broadcast even
+    } else {                 //If the (int generated remainder/2) is not =0 then
+        cout<<"odd"<<endl;   //broadcast odd
+    }}
+
+int main() {                 //Declare main fxn
+    srand(time(NULL));       //Uses time in the generation of random numbers
+    int randoN =rand()%100+1;   //Creates an int named randoN and defines it as a random #<100
+    evenOddOrZero(randoN);    //Uses the previous fxn defined with randoN as the parameters
+    cout<< randoN <<endl;     //Broadcast the random # generated
+    return 0;
+}
