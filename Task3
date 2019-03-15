@@ -1,0 +1,56 @@
+/*
+ *Author:Ariel Mora (arielmora@bennington.edu)
+ * Date: 2/19/2019
+ * source utilized: https://en.cppreference.com/w/cpp/language/switch
+ *
+ */
+
+#include <iostream>
+#include<ctime>                 //Uses computer in functions
+using namespace std;
+int numIn;                      //Defines an integer for use in functions
+string data1;                   //Creates string for data to be entered
+
+int getString(){                            //Creates function for user to enter string
+    cout<<"please enter a string"<<endl;    //Tells user to enter string
+    cin>>data1;                             //Gives user location to enter string
+    return 0;
+}
+
+int getInt() {                              //Function for user to enter an integer
+cout<<"please enter an integer"<<endl;      //Asks user for integer
+cin>>numIn;                                 //Provides place for user to enter integer
+return numIn;
+}
+
+int whatNumberIsIt(int rando1){             //Function that uses a random integer rando1 in parameters
+    switch (rando1){                        //Switch statement that dependds on the outcome of rando1
+        case 0:cout << "zero"<< endl;       //Broadcast for the random number outcome  of 0
+            break;
+        case 1:cout << "one" << endl;       //Broadcast for the random number outcome  of 1
+            break;
+        case 2:cout << "two" << endl;       //Broadcast for the random number outcome  of 2
+            break;
+        case 3:cout << "three" << endl;     //Broadcast for the random number outcome  of 3
+            break;
+        case 4:cout<< "four" << endl;       //Broadcast for the random number outcome  of 4
+            break;
+        case 5:cout << "five" << endl;      //Broadcast for the random number outcome  of 5
+            break;
+        default:cout << "not valid" << endl; //Broadcast if the outcome of rando1 is not <5
+    }}
+
+int main() {                    //Main function
+    srand(time(NULL));          //Utilizes the computer time in the random number generator
+    int rando1 =rand()%5+1;     //Creates a variable that is randomized with the use of the computer time
+    cout<< rando1<<endl;        //Broadcasts the value of the random from the random number generator
+    getString();                //Activates the getString function
+    getInt();                   //Activates the getInt function
+    whatNumberIsIt(rando1);     //Activates the WhatNumberIsIt function while including the variable in parameters
+    int x=0;                    //Creates a variable x equal to 0
+    for ( x=0; x<20; ++x) {     //For loop that runs 20 times
+        int rando2 =rand()%5+1; //For loop creates different random number for each time ran
+        cout << rando2 <<endl;} //Broadcasts the random numbers given by the for loop
+    return 0;
+}
+
