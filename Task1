@@ -1,0 +1,17 @@
+/* Author: Ariel Mora (arielmora@bennington.edu)
+ * Date: 3/5/2019
+ */
+
+#include <iostream>
+using namespace std;
+
+void printHelloNTimes(){    //Creates printing function
+    int i=0;                //Establishes integer i as equal to 0
+    while (i<10){           //Initializes while loop when i<10
+        cout<<"Hello:"<<i;  //Broadcast hello i times
+        i++;}               //Increases value of i
+}
+int main() {                //Creates main function
+    printHelloNTimes();     //Runs the print function
+    return 0;               //Returns 0 as exit code
+}
